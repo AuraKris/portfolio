@@ -57,7 +57,7 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
           >
             <div>
-              <img src="src/assets/PP-aura.jpg" alt="" className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover"/>
+              <img src="./PP-aura.jpg" alt="" className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover"/>
             </div>
           </motion.div>
         </div>
