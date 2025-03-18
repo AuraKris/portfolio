@@ -59,7 +59,7 @@ const About = () => {
               <h3 className="text-xl font-semibold">Technical Skills</h3>
             </div>
             <p className="text-gray-600">
-              Proficient in Python, SQL, HTML, CSS, JavaScript, Java, C++, React and Laravel. An intermediate in developing AI and ML solutions.
+              Proficient in Python, SQL, HTML, CSS, JavaScript, and React. An intermediate in developing AI and ML solutions.
             </p>
           </motion.div>
 
