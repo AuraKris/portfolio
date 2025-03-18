@@ -44,7 +44,7 @@ const Hero = () => {
               <a href="mailto:aurakristian.20@gmail.com" className="text-gray-700 hover:text-primary transition-colors" title='Gmail'>
                 <FaEnvelope size={24} />
               </a>
-              <a href="/assets/Resume.pdf" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-primary transition-colors" alt="Resume" title="Resume">
+              <a href="https://www.canva.com/design/DAGg3JxRshc/6g_201QNjkPDrSGu4xVCqQ/view?utm_content=DAGg3JxRshc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h9429f4b567" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-primary transition-colors" alt="Resume" title="Resume">
                 <FaFilePdf size={24} />
               </a>
             </div>
