@@ -35,7 +35,7 @@ const Research = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          My contributions to academic research in AI and computer vision
+          My contributions to academic research in AI and Computer Vision
         </motion.p>
 
         <div className="space-y-8 mt-12">
