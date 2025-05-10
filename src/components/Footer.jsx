@@ -58,7 +58,7 @@ const Footer = () => {
             >
               About
             </Link>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <a href="https://www.canva.com/design/DAGnDWZVynk/pY509Rr9VJZIGYdclMzGKQ/view?utm_content=DAGnDWZVynk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hd875d0f6c4" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-sm transition-colors" alt="Resume Canva Link" title="Resume">
               Resume
             </a>
           </div>
