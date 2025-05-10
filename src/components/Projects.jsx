@@ -19,7 +19,7 @@ const Projects = () => {
       id: 2,
       title: 'Healthcare and Forum Website',
       description: 'This was a web programming course final project that I completed in 2024. It was a simple full-stack web development project that involved creating a healthcare and forum website using Laravel and MySQL. The project was built using a modern and responsive design, with a focus on user experience and accessibility. The forum was also able to handle multiple threads and posts, and the healthcare section had a feature for patient registration and appointment scheduling.',
-      image: '',
+      image: './aol-wp.png',
       tags: ['Web Development', 'Full Stack'],
       github: 'https://github.com/AuraKris/AOL-WP',
       demo: '',
