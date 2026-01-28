@@ -17,13 +17,22 @@ const Hero = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
               Hi, I'm <span className="text-primary">Aura Kristian</span>
             </h1>
-            <h2 className="text-2xl md:text-3xl text-gray-700 mb-6">
-              AI and Robotics Enthusiast
+            <h2 className="text-2xl md:text-3xl text-gray-700 mb-6 font-semibold">
+              Backend Engineer & AI Researcher
             </h2>
             <p className="text-lg text-gray-600 mb-8 max-w-lg">
-              Computer Science undergraduate at BINUS University with a passion for Artificial Intelligence, 
-              Robotics, Machine Learning and Software Development. 
+              Software Engineer specializing in scalable microservices and high-concurrency systems. 
+              Currently building enterprise backend solutions at <span className="font-bold text-gray-800">Blibli</span> and 
+              publishing Computer Vision research.
             </p>
+
+            <div className="flex flex-wrap gap-2 mb-8">
+                {['Java Spring Boot', 'Reactive', 'SQL', 'Docker', 'Python AI'].map((tech) => (
+                    <span key={tech} className="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm font-medium">
+                        {tech}
+                    </span>
+                ))}
+            </div>
             
             <div className="flex flex-wrap gap-4">
               <Link to="contact" smooth={true} duration={500} offset={-70}>
@@ -44,7 +53,7 @@ const Hero = () => {
               <a href="mailto:aurakristian.20@gmail.com" className="text-gray-700 hover:text-primary transition-colors" title='Gmail'>
                 <FaEnvelope size={24} />
               </a>
-              <a href="https://www.canva.com/design/DAGnDWZVynk/pY509Rr9VJZIGYdclMzGKQ/view?utm_content=DAGnDWZVynk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hd875d0f6c4" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-primary transition-colors" alt="Resume Canva Link" title="Resume">
+              <a href="src/assets/ATS_CV.pdf" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-primary transition-colors" title="Download Resume">
                 <FaFilePdf size={24} />
               </a>
             </div>

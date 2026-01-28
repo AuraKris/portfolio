@@ -1,19 +1,27 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaFilePdf, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaFilePdf, FaExternalLinkAlt, FaAward } from 'react-icons/fa';
 
 const Research = () => {
   const researchPapers = [
     {
       id: 1,
+      title: "Authentic Dataset Development and Exploration of Cross-Language Transfer Learning for Aksara Jawa Recognition",
+      abstract: "Developed a novel dataset of 3,528 authentic handwritten Javanese characters to address low-resource language scarcity. Engineered a new-strategy approach using Cross-Language Transfer Learning from Devanagari script. Achieved a peak F1-score of 98.48% using an EfficientNet-B0-SA architecture, systematically outperforming standard ImageNet baselines.",
+      journal: "Accepted at ICHGIT International Conference",
+      year: 2026, 
+      link: "", 
+      status: "Accepted"
+    },
+    {
+      id: 2,
       title: "Exploring the Impact of Image Downscaling Algorithms on Color Perception",
-      abstract: "This study evaluates the impact of image downscaling algorithms on color perception, an area that has received little attention. Using Quantitative Color Pattern Analysis (QCPA), we compare Bicubic Interpolation, Lanczos Resampling, Seam Carving, and Rapid Detail-Preserving Image Downscaling (RDPID) on the Imagenette and DIV2K datasets. Metrics such as color histogram similarity and dominant color shifts reveal that Bicubic Interpolation and RDPID preserve color fidelity better than Seam Carving. Findings highlight varying degrees of color loss, emphasizing the need for further research on downscaling methods and their implications for computer vision.",
+      abstract: "Evaluated the impact of downscaling algorithms on color perception using Quantitative Color Pattern Analysis (QCPA). Comparative analysis of Bicubic, Lanczos, Seam Carving, and RDPID on Imagenette/DIV2K datasets. Proved that RDPID achieves optimal fidelity (SSIM 0.768) while Seam Carving degrades color retention to 20.8%.",
       journal: "2024 International Seminar on Application for Technology of Information and Communication (iSemantic)",
       year: 2024,
       link: "https://ieeexplore.ieee.org/document/10762067",
-      pdf: "https://example.com/research-paper.pdf",
+      status: "Published"
     },
-    // Add more research papers as they become available
   ];
 
   return (
@@ -39,7 +47,7 @@ const Research = () => {
         </motion.p>
 
         <div className="space-y-8 mt-12">
-          {researchPapers.map((paper, index) => (
+          {researchPapers.map((paper) => (
             <motion.div 
               key={paper.id}
               className="card p-6"
@@ -48,62 +56,81 @@ const Research = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-semibold mb-2">{paper.title}</h3>
-              <div className="text-sm text-gray-500 mb-4">
-                Published in {paper.journal}, {paper.year}
+              <div className="absolute top-4 right-4">
+                <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                    paper.status === 'Published' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'
+                }`}>
+                    {paper.status}
+                </span>
               </div>
-              <p className="text-gray-600 mb-4">
+              <h3 className="text-xl font-bold mb-2 text-gray-800 pr-12">{paper.title}</h3>
+              <div className="text-sm text-primary font-medium mb-4 flex items-center">
+                <FaAward className="mr-2" />
+                {paper.journal}, {paper.year}
+              </div>
+              <p className="text-gray-600 mb-6 leading-relaxed">
                 {paper.abstract}
               </p>
               <div className="flex space-x-4">
-                {/* <a 
-                  href={paper.pdf} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center text-primary hover:text-primary-dark transition-colors"
-                >
-                  <FaFilePdf className="mr-2" />
-                  PDF
-                </a> */}
-                <a 
-                  href={paper.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center text-primary hover:text-primary-dark transition-colors"
-                >
-                  <FaExternalLinkAlt className="mr-2" />
-                  View Publication
-                </a>
+                {paper.link ? (
+                    <a 
+                    href={paper.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center text-gray-700 hover:text-primary transition-colors font-medium"
+                    >
+                    <FaExternalLinkAlt className="mr-2" size={14}/>
+                    View Publication
+                    </a>
+                ) : (
+                    <span className="text-gray-400 text-sm italic">Link coming soon</span>
+                )}
               </div>
             </motion.div>
           ))}
         </div>
 
         <motion.div 
-          className="mt-12 bg-white p-6 rounded-xl shadow-md"
+          className="mt-12 bg-white p-8 rounded-xl shadow-sm border border-gray-100"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-xl font-semibold mb-4">Research Interests</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <h3 className="text-2xl font-bold mb-6 text-gray-800">Research Focus</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h4 className="font-medium text-lg mb-2">Current Focus Areas</h4>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>Computer Vision and Image Processing</li>
-                <li>Deep Learning for Visual Recognition</li>
-                
-                <li>Natural Language Processing</li>
+              <h4 className="font-semibold text-lg mb-3 text-primary">Core Specializations</h4>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                    <span className="mr-2 text-primary">•</span>
+                    <span className="text-gray-600"><b>Computer Vision:</b> CNN Architectures (EfficientNet, ResNet), Image Quality Assessment (SSIM, QCPA).</span>
+                </li>
+                <li className="flex items-start">
+                    <span className="mr-2 text-primary">•</span>
+                    <span className="text-gray-600"><b>Transfer Learning:</b> Cross-lingual adaptation for low-resource scripts (Javanese/Devanagari).</span>
+                </li>
+                <li className="flex items-start">
+                    <span className="mr-2 text-primary">•</span>
+                    <span className="text-gray-600"><b>Deep Learning:</b> Model optimization and fine-tuning for specialized datasets.</span>
+                </li>
               </ul>
             </div>
             <div>
-              <h4 className="font-medium text-lg mb-2">Future Research Directions</h4>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>Multimodal AI Systems</li>
-                {/* <li>Explainable AI</li> */}
-                <li>AI in Robotics</li>
-                <li>Reinforcement Learning Applications</li>
+              <h4 className="font-semibold text-lg mb-3 text-primary">Future Interests</h4>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                    <span className="mr-2 text-primary">•</span>
+                    <span className="text-gray-600"><b>AI in Robotics:</b> Integrating vision systems with autonomous control.</span>
+                </li>
+                <li className="flex items-start">
+                    <span className="mr-2 text-primary">•</span>
+                    <span className="text-gray-600"><b>Applied AI in Application:</b> Integrating Artificial Intellegence tailored to each application purposes.</span>
+                </li>
+                 <li className="flex items-start">
+                    <span className="mr-2 text-primary">•</span>
+                    <span className="text-gray-600"><b>Explainable AI (XAI):</b> Making deep learning models more interpretable for enterprise use.</span>
+                </li>
               </ul>
             </div>
           </div>

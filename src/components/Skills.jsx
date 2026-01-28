@@ -1,7 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaPython, FaJava, FaReact, FaHtml5, FaCss3Alt, FaJs, FaDatabase, FaLaravel, FaBrain } from 'react-icons/fa';
-import { SiCplusplus, SiTensorflow, SiPytorch, SiScikitlearn, SiOpencv, SiPhp, SiMysql, SiVite, SiNextdotjs, SiTailwindcss } from 'react-icons/si';
+import { FaPython, FaJava, FaReact, FaJs, FaDatabase, FaLaravel, FaDocker } from 'react-icons/fa';
+import { SiCplusplus, SiTensorflow, SiPytorch, 
+  SiScikitlearn, SiOpencv, SiVite, SiTailwindcss, 
+  SiApachekafka, SiSpring, SiKubernetes, SiPostgresql, SiMongodb 
+} from 'react-icons/si';
 
 const Skills = () => {
   const proficiencyLevels = {
@@ -9,42 +12,35 @@ const Skills = () => {
     advanced: { label: 'Advanced', width: '80%' },
     intermediate: { label: 'Intermediate', width: '65%' },
     familiar: { label: 'Familiar', width: '50%' },
-    beginner: { label: 'Beginner', width: '35%' },
-    novice: { label: 'Novice', width: '20%' }
+    beginner: { label: 'Beginner', width: '35%' }
   };
 
   const programmingSkills = [
+    { name: 'Java (SE/EE)', icon: <FaJava />, level: 'advanced' },
     { name: 'Python', icon: <FaPython />, level: 'intermediate' },
-    { name: 'HTML', icon: <FaHtml5 />, level: 'intermediate' },
-    { name: 'CSS', icon: <FaCss3Alt />, level: 'intermediate' },
+    { name: 'SQL', icon: <FaDatabase />, level: 'intermediate' },
     { name: 'JavaScript', icon: <FaJs />, level: 'familiar' },
-    { name: 'MySQL', icon: <SiMysql />, level: 'familiar' },
-    { name: 'Java', icon: <FaJava />, level: 'beginner' },
-    { name: 'C++', icon: <SiCplusplus />, level: 'beginner' },
-    { name: 'PHP', icon: <SiPhp />, level: 'beginner' },
-  ];
-
-  const frameworkSkills = [
-    { name: 'TensorFlow', icon: <SiTensorflow />, level: 'intermediate' },
-    { name: 'Scikit-Learn', icon: <SiScikitlearn />, level: 'intermediate' },
-    { name: 'OpenCV', icon: <SiOpencv />, level: 'familiar' },
-    { name: 'ReactJS', icon: <FaReact />, level: 'familiar' },
+    { name: 'C++', icon: <SiCplusplus />, level: 'familiar' },
+    { name: 'ReactJS/TS', icon: <FaReact />, level: 'familiar' },
     { name: 'Laravel', icon: <FaLaravel />, level: 'familiar' },
     { name: 'TailwindCSS', icon: <SiTailwindcss />, level: 'familiar' },
-    { name: 'Vite', icon: <SiVite />, level: 'beginner' },
-    { name: 'PyTorch', icon: <SiPytorch />, level: 'novice' },
-    // { name: 'React Native', icon: <FaReact />, level: 'novice' },
+    { name: 'Vite', icon: <SiVite />, level: 'familiar' }
   ];
 
-  const domainSkills = [
-    { name: 'Artificial Intelligence', level: 'intermediate' },
-    { name: 'Machine Learning', level: 'intermediate' },
-    { name: 'Deep Learning', level: 'intermediate' },
-    { name: 'Computer Vision', level: 'intermediate' },
-    { name: 'Web Development', level: 'intermediate' },
-    { name: 'Data Science', level: 'familiar' },
-    { name: 'Software Development', level: 'beginner' },
-    { name: 'Natural Language Processing', level: 'beginner' },
+  const backendCloudSkills = [
+    { name: 'Spring Boot (MVC/WebFlux)', icon: <SiSpring />, level: 'advanced' },
+    { name: 'PostgreSQL', icon: <SiPostgresql />, level: 'intermediate' },
+    { name: 'MongoDB', icon: <SiMongodb />, level: 'intermediate' },
+    { name: 'Docker', icon: <FaDocker />, level: 'intermediate' },
+    { name: 'Apache Kafka', icon: <SiApachekafka />, level: 'familiar' },
+    { name: 'Kubernetes (GKE)', icon: <SiKubernetes />, level: 'beginner' },
+  ];
+
+  const aiResearchSkills = [
+    { name: 'PyTorch', icon: <SiPytorch />, level: 'intermediate' },
+    { name: 'TensorFlow', icon: <SiTensorflow />, level: 'intermediate' },
+    { name: 'Computer Vision (OpenCV)', icon: <SiOpencv />, level: 'intermediate' },
+    { name: 'Scikit-Learn', icon: <SiScikitlearn />, level: 'intermediate' },
   ];
 
   const softSkills = [
@@ -110,7 +106,7 @@ const Skills = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          A comprehensive overview of my technical expertise and capabilities
+          Core competencies in Backend Engineering, Cloud Infrastructure, and AI Research
         </motion.p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
@@ -121,12 +117,14 @@ const Skills = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-xl font-semibold mb-6">Programming Languages</h3>
+            <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
+                <FaJava className="text-primary"/> Languages
+            </h3>
             <div className="space-y-6">
               {programmingSkills.map((skill, index) => (
                 <div key={index}>
                   <div className="flex items-center mb-2">
-                    <span className="text-primary text-xl mr-2">{skill.icon}</span>
+                    <span className="text-gray-700 text-xl mr-2">{skill.icon}</span>
                     <span className="font-medium">{skill.name}</span>
                     <span className="ml-auto text-sm text-gray-500">
                       {proficiencyLevels[skill.level].label}
@@ -134,7 +132,7 @@ const Skills = () => {
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2">
                     <div 
-                      className="bg-primary rounded-full h-2" 
+                      className="bg-primary rounded-full h-2 transition-all duration-1000" 
                       style={{ width: proficiencyLevels[skill.level].width }}
                     ></div>
                   </div>
@@ -150,12 +148,14 @@ const Skills = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-xl font-semibold mb-6">Frameworks & Libraries</h3>
+            <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
+                <SiSpring className="text-green-600"/> Backend & Cloud
+            </h3>
             <div className="space-y-6">
-              {frameworkSkills.map((skill, index) => (
+              {backendCloudSkills.map((skill, index) => (
                 <div key={index}>
                   <div className="flex items-center mb-2">
-                    <span className="text-blue-500 text-xl mr-2">{skill.icon}</span>
+                    <span className="text-gray-700 text-xl mr-2">{skill.icon}</span>
                     <span className="font-medium">{skill.name}</span>
                     <span className="ml-auto text-sm text-gray-500">
                       {proficiencyLevels[skill.level].label}
@@ -163,7 +163,7 @@ const Skills = () => {
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2">
                     <div 
-                      className="bg-blue-500 rounded-full h-2" 
+                      className="bg-green-600 rounded-full h-2 transition-all duration-1000" 
                       style={{ width: proficiencyLevels[skill.level].width }}
                     ></div>
                   </div>
@@ -173,17 +173,20 @@ const Skills = () => {
           </motion.div>
 
           <motion.div 
-            className="card p-6 md:col-span-2 lg:col-span-1"
+            className="card p-6"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-xl font-semibold mb-6">Domain Expertise</h3>
+            <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
+                <SiPytorch className="text-orange-600"/> AI & Research
+            </h3>
             <div className="space-y-6">
-              {domainSkills.map((skill, index) => (
+              {aiResearchSkills.map((skill, index) => (
                 <div key={index}>
                   <div className="flex items-center mb-2">
+                    <span className="text-gray-700 text-xl mr-2">{skill.icon}</span>
                     <span className="font-medium">{skill.name}</span>
                     <span className="ml-auto text-sm text-gray-500">
                       {proficiencyLevels[skill.level].label}
@@ -191,7 +194,7 @@ const Skills = () => {
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2">
                     <div 
-                      className="bg-secondary rounded-full h-2" 
+                      className="bg-orange-500 rounded-full h-2 transition-all duration-1000" 
                       style={{ width: proficiencyLevels[skill.level].width }}
                     ></div>
                   </div>
@@ -213,28 +216,25 @@ const Skills = () => {
         </motion.div>
 
         <motion.div 
-          className="mt-12"
+          className="mt-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl font-semibold mb-8 text-center">Soft Skills</h3>
+          <h3 className="text-2xl font-semibold mb-8 text-center text-gray-800">Professional Competencies</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {softSkills.map((category, index) => (
               <motion.div
                 key={index}
-                className="card p-6"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 * index }}
-                viewport={{ once: true }}
+                className="card p-6 border-t-4 border-primary shadow-sm hover:shadow-md transition-shadow"
+                whileHover={{ y: -5 }}
               >
-                <h4 className="text-lg font-semibold mb-4 text-primary">{category.category}</h4>
-                <ul className="list-disc space-y-2 ml-4">
+                <h4 className="text-lg font-bold mb-4 text-gray-800">{category.category}</h4>
+                <ul className="space-y-3">
                   {category.skills.map((skill, skillIndex) => (
-                    <li key={skillIndex} className="items-center text-gray-700">
-                      {/* <span className="w-2 h-2 bg-secondary rounded-full mr-2 flex-0"></span> */}
+                    <li key={skillIndex} className="flex items-start text-gray-600 text-sm">
+                      <span className="mr-2 text-primary mt-1">•</span>
                       {skill}
                     </li>
                   ))}

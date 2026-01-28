@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <h2 className="text-2xl font-bold">Aura Kristian</h2>
-            <p className="text-gray-400 mt-2">AI & Robotics Enthusiast</p>
+            <p className="text-gray-400 mt-2">Backend Engineer & AI Researcher</p>
           </div>
           
           <div className="flex space-x-6">
@@ -58,7 +58,23 @@ const Footer = () => {
             >
               About
             </Link>
-            <a href="https://www.canva.com/design/DAGnDWZVynk/pY509Rr9VJZIGYdclMzGKQ/view?utm_content=DAGnDWZVynk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hd875d0f6c4" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-sm transition-colors" alt="Resume Canva Link" title="Resume">
+            <Link
+              key="Projects"
+              to="projects"
+              smooth={true}
+              duration={500}
+              offset={-70}
+              className="text-gray-400 hover:text-white text-sm transition-colors cursor-pointer"
+            >
+              Projects
+            </Link>
+            <a 
+              href="src/assets/ATS_CV.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-gray-400 hover:text-white text-sm transition-colors" 
+              title="Download Resume"
+            >
               Resume
             </a>
           </div>
