@@ -45,44 +45,27 @@ const Skills = () => {
 
   const softSkills = [
     {
-      category: "Communication",
+      category: "Engineering Impact",
       skills: [
-        "Explaining technical concepts clearly in research and group projects",
-        "Writing structured documentation and academic research papers",
-        "Adapting communication styles for effective teamwork"
+        "Mentored junior students in Computer Vision and Web Programming",
+        "Contributed to Spring Boot migrations of microservices (Spring Boot 2.3 → 2.7)",
+        "Maintained Code Quality & Test Coverage (SonarQube)"
       ]
     },
     {
-      category: "Leadership & Teamwork",
+      category: "Research & Analysis",
       skills: [
-        "Mentoring and guiding fellow students in technical subjects",
-        "Coordinating group projects and fostering collaborative problem-solving",
-        "Encouraging collaboration and knowledge-sharing"
+        "Quantitative Color Pattern Analysis (QCPA) methodology",
+        "Technical writing for international conferences (ICHGIT/iSemantic)",
+        "Data-driven decision making for algorithm optimization"
       ]
     },
     {
-      category: "Problem-Solving & Innovation",
+      category: "Collaboration & Agile",
       skills: [
-        "Tackling real-world challenges with AI, ML, and software development",
-        "Developing creative solutions for personal and academic projects",
-        "Exploring efficient methodologies in research and technical problem-solving",
-      ]
-    },
-    {
-      category: "Research & Analytical Thinking",
-      skills: [
-        "Conducting AI research with published findings on image downscaling algorithms",
-        "Applying structured, research-driven approaches to problem-solving",
-        "Evaluating data and algorithms for improved performance and efficiency",
-      ]
-    },
-    {
-      category: "Professional & Time Management",
-      skills: [
-        "Time management across multiple projects and responsibilities",
-        "Adapting to new technologies and learning in fast-paced environments",
-        "Critical thinking and structured problem analysis for decision-making",
-        "Research methodology and technical writing"
+        "Agile/Scrum workflow (Jira, 2-week sprints)",
+        "Cross-functional communication with DevOps and Product teams",
+        "Writing comprehensive API documentation & contracts"
       ]
     }
   ];
@@ -211,7 +194,7 @@ const Skills = () => {
           transition={{ duration: 0.5, delay: 0.6 }}
           viewport={{ once: true }}
         >
-          <p>Proficiency Levels: Novice (started learning) → Beginner (basic knowledge) → 
+          <p>Proficiency Levels: Beginner (basic knowledge) → 
             Familiar (working knowledge) → Intermediate (practical experience) → Advanced (strong proficiency)</p>
         </motion.div>
 

@@ -40,7 +40,7 @@ const About = () => {
               <h3 className="text-xl font-semibold">Backend Engineering</h3>
             </div>
             <p className="text-gray-600">
-              Building enterprise microservices at <b>Blibli</b> using <b>Spring Boot (2.7/3.x)</b>, <b>Kafka</b>, and <b>Project Reactor</b>. 
+              Building enterprise microservices at <b>Blibli</b> using <b>Spring Boot (2.7/3.4)</b>, <b>Kafka</b>, and <b>Project Reactor</b>. 
               Experienced in migrating legacy monoliths to hybrid reactive architectures.
             </p>
           </motion.div>
@@ -96,7 +96,7 @@ const About = () => {
           <div className="space-y-6 text-gray-700 leading-relaxed">
             <p>
               I am a <b>Software Engineer</b> with a dual focus on robust backend infrastructure and applied artificial intelligence. 
-              Currently, I work with the <b>B2G Technology Team at Blibli</b> (Djarum Group), where I help maintain the SIPLah procurement platform.
+              Currently, I work with the <b>B2G Technology Team at Blibli</b>, where I help maintain the SIPLah procurement platform.
             </p>
             <p>
               My core expertise lies in <b>developing features and modernizing legacy systems</b>. I recently contributed to technical initiatives to continue the 
