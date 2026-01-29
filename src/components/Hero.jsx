@@ -53,7 +53,7 @@ const Hero = () => {
               <a href="mailto:aurakristian.20@gmail.com" className="text-gray-700 hover:text-primary transition-colors" title='Gmail'>
                 <FaEnvelope size={24} />
               </a>
-              <a href="./ATS_CV.pdf" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-primary transition-colors" title="Download Resume">
+              <a href="./ATS_CV_Final.pdf" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-primary transition-colors" title="Download Resume">
                 <FaFilePdf size={24} />
               </a>
             </div>

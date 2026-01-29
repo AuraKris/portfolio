@@ -35,13 +35,13 @@ const About = () => {
           >
             <div className="flex items-center mb-4">
               <div className="bg-primary-light bg-opacity-10 p-3 rounded-lg mr-4">
-                <FaGraduationCap className="text-primary text-2xl" />
+                <FaLaptopCode className="text-primary text-2xl" />
               </div>
               <h3 className="text-xl font-semibold">Backend Engineering</h3>
             </div>
             <p className="text-gray-600">
               Building enterprise microservices at <b>Blibli</b> using <b>Spring Boot (2.7/3.4)</b>, <b>Kafka</b>, and <b>Project Reactor</b>. 
-              Experienced in migrating legacy monoliths to hybrid reactive architectures.
+              Contributed to major framework migrations (2.3 to 2.7) by refactoring legacy dependencies into hybrid reactive architectures.
             </p>
           </motion.div>
 
@@ -54,7 +54,7 @@ const About = () => {
           >
             <div className="flex items-center mb-4">
               <div className="bg-primary-light bg-opacity-10 p-3 rounded-lg mr-4">
-                <FaLaptopCode className="text-primary text-2xl" />
+                <FaFlask className="text-primary text-2xl" />
               </div>
               <h3 className="text-xl font-semibold">AI Research</h3>
             </div>
@@ -73,7 +73,7 @@ const About = () => {
           >
             <div className="flex items-center mb-4">
               <div className="bg-primary-light bg-opacity-10 p-3 rounded-lg mr-4">
-                <FaFlask className="text-primary text-2xl" />
+                <FaGraduationCap className="text-primary text-2xl" />
               </div>
               <h3 className="text-xl font-semibold">Education</h3>
             </div>
@@ -101,7 +101,7 @@ const About = () => {
             <p>
               My core expertise lies in <b>developing features and modernizing legacy systems</b>. I recently contributed to technical initiatives to continue the 
               migration of synchronous Spring Boot services to <b>hybrid-reactive patterns (WebFlux/Reactor)</b> (2.3 to 2.7), optimizing high-concurrency flows while preserving system stability. 
-              I also contributed in handling cloud infrastructure challenges, managing deployments on <b>Google Kubernetes Engine (GKE)</b> and debugging 
+              I also contributed in cloud infrastructure transitions, resolving <b>Google Kubernetes Engine (GKE)</b> configuration with DevOps and debugging 
               distributed systems using ArgoCD and SigNoz.
             </p>
             <p>
@@ -110,7 +110,7 @@ const About = () => {
               ICHGIT International Conference.
             </p> 
             <p>
-              Beyond code, I am passionate about problem solving, debugging complex algorithms and understand software design patterns. 
+              Beyond code, I am passionate about problem solving, debugging complex algorithms and understanding software design patterns. 
               My goal is to continue building systems that are not only performant and scalable but also intelligent and adaptive.
             </p>
           </div>

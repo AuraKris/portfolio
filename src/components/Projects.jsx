@@ -38,7 +38,7 @@ const Projects = () => {
     {
       id: 3,
       title: 'SIPLah Microservices Migration (Blibli)',
-      description: 'Enterprise development initiative for Indonesia\'s B2G procurement platform. Contributed on the backend feature development and migration of core services from Spring Boot 2.3 to 2.7.',
+      description: 'Enterprise development initiative for Indonesia\'s B2G procurement platform. Contributed on the backend feature development and migration of core services from Spring Boot 2.3 to 2.7 and GCE to GKE Adoption(Configuration).',
       image: './blibli-architecture.png',
       tags: ['Spring Boot', 'Kafka', 'PostgreSQL', 'MongoDB', 'Microservices'],
       github: '', 

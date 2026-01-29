@@ -69,7 +69,7 @@ const Footer = () => {
               Projects
             </Link>
             <a 
-              href="./ATS_CV.pdf" 
+              href="./ATS_CV_Final.pdf" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-gray-400 hover:text-white text-sm transition-colors" 
