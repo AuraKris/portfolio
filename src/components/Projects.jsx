@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt, FaPaperclip, FaLock } from 'react-icons/fa';
+import { AnimatePresence, motion } from 'framer-motion';
+import { FaGithub, FaExternalLinkAlt, FaPaperclip, FaLock, FaProjectDiagram, FaDatabase, FaVideo, FaTimes } from 'react-icons/fa';
 
 const FreelanceProjectCaseStudyModal = ({ project, onClose }) => {
   if (!project) return null;
@@ -27,7 +27,7 @@ const FreelanceProjectCaseStudyModal = ({ project, onClose }) => {
         <div className="p-6 space-y-8">
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-blue-50 p-5 rounded-lg border border-blue-100">
-              <h4 className="font-semibold text-blue-800 mb-2 flex items-center"><FaChartNetwork className="mr-2"/> The Challenge</h4>
+              <h4 className="font-semibold text-blue-800 mb-2 flex items-center"><FaProjectDiagram className="mr-2"/> The Challenge</h4>
               <p className="text-sm text-gray-700 leading-relaxed">
                 Client relied on manual Excel workflows for item requests, work order and purchase order processes, resulting in slow processes, slight data discrepancy and untraceable approvals. 
                 Needed a strictly typed system to enforce "Request &rarr; Approval &rarr; PO" flows.
@@ -281,7 +281,7 @@ const Projects = () => {
                         onClick={() => setSelectedProject(project)}
                         className="flex items-center text-purple-600 hover:text-purple-800 transition-colors text-sm font-bold"
                     >
-                        <FaChartNetwork className="mr-2" size={16} /> View Case Study
+                        <FaProjectDiagram className="mr-2" size={16} /> View Case Study
                     </button>
                   )}
 
