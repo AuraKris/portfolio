@@ -113,7 +113,7 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: 'SIPLah Microservices Migration (Blibli)',
+      title: 'SIPLah Spring Boot Migration (Blibli)',
       description: 'Enterprise development initiative for one of Indonesia\'s School procurement platform. Contributed on the backend feature development and migration of core services from Spring Boot 2.3 to 2.7 and GCE to GKE Adoption(Configuration).',
       image: './blibli-siplah.png',
       tags: ['Spring Boot', 'Kafka', 'PostgreSQL', 'MongoDB', 'Microservices', 'Command Pattern', 'Integration Testing'],
