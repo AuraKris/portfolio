@@ -124,7 +124,7 @@ const Projects = () => {
     },
     {
       id: 4,
-      title: 'Freelance Enterprise Procure-to-Pay System',
+      title: 'Freelance Enterprise Procure-to-Pay System (Ongoing)',
       description: 'Designed and deployed an on-premise ERP solution to digitize complex procurement workflows. Implemented Role-Based Access Control (RBAC), Multi-Level Approvals, and a strict State Machine for PO generation, replacing legacy manual Excel processes.',
       image: '', // Upload diagram image later
       tags: ['Spring Boot 3.5.9', 'State Machine', 'PostgreSQL', 'Docker', 'System Design'],
